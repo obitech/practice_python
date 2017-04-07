@@ -10,7 +10,6 @@ Extra:
 
 import random
 
-# Pick a strength: 1 = weak, 2 = mid, 3 = strong
 def generate_password(length=5):
 
     if length == 0:
