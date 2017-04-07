@@ -20,7 +20,6 @@ def generate_password(length=5):
 
     return ''.join([random.choice(pool) for x in range(length)])
 
-
 # Test
 for i in range(10):
     print(generate_password(random.randint(0, 20)))
