@@ -11,13 +11,14 @@ Remember the rules:
 
 def get_weapon():
     valid = ['rock', 'r', 'paper', 'p', 'pap', 'scissors', 'sci', 's', 'sciss', 'scis']
+    
     while True:
         inp = input("Choose between Rock/Paper/Scissors: ").lower()
 
         if inp in valid:
-            if inp == 'rock' or inp == 'r':
+            if inp[0] == 'r':
                 return 'r'
-            elif inp == 'paper' or  inp == 'pap' or inp == 'p':
+            elif inp[0] == 'p':
                 return 'p'
             else:
                 return 's'
@@ -28,9 +29,9 @@ def get_yn():
     while True:
         check = input("Do you want to play again (y/n)? ").lower()
 
-        if check == ('y' or 'yes' or 'ye' or 'j' or 'ja'):
+        if check[0] == 'y' or check[0] == 'j':
             return True
-        elif check == ('n' or 'no' or 'ney' or 'nein' or 'nee'):
+        elif check[0] == 'n':
             return False
         else:
             print("Invalid choice.")
