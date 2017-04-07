@@ -12,6 +12,7 @@ soup = bs(r_html, 'html.parser')
 titles = []
 
 # Getting all strings which are in a <h><a> tag with class '*story*'
+# This will also get some other titles since they have a story class as well
 for x in soup.find_all(re.compile('h'), class_ = re.compile('story')):
     titles.append(str(x.find_next('a').string).strip())
 
