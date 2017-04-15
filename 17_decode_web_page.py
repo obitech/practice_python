@@ -1,5 +1,6 @@
 import re
 import requests
+import datetime
 from bs4 import BeautifulSoup as bs
 
 # Loading HTML into variable
@@ -19,7 +20,7 @@ for x in soup.find_all(re.compile('h'), class_ = re.compile('story')):
 # Removing duplicates
 titles = [x for x in set(titles)]
 
-print("All the titles of the NYTimes Homepage from April 4th 2017:")
+print("All the titles of the NYTimes Homepage from " + datetime.datetime.now().strftime("%d.%m.%y %H:%M"))
 
 for string in titles:
     print(string)
