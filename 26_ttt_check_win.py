@@ -28,7 +28,6 @@ def check_board(arr):
 
     scores_p1, scores_p2, diag_p1, diag_p2 = [], [], 0, 0
 
-    # Check rows
     for i in range(len(arr)):
         row_p1, col_p1, row_p2, col_p2 = 0, 0, 0, 0
         for j in range(len(arr[i])):
@@ -90,20 +89,6 @@ def check_board(arr):
         return 2
     else:
         return 0
-
-    # Check cols
-    # for i in len(arr):
-    # win_p1, win_p2 = 0, 0
-    # for j in len(arr[i]):
-    #     if arr[j][i] == 1:
-    #         win_p1 += 1
-    #     elif arr[j][i] == 2:
-    #         win_p2 += 2
-    #     else:
-    #         pass
-    # scores_p1.append(win_p1)
-    # scores_p2.append(win_p2)
-
 
 if __name__ == "__main__":
 
